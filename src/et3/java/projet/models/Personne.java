@@ -17,10 +17,10 @@ public class Personne {
     public void rendreDocument(Document doc) {
         //TO DO
     }
-
-    List<Document> getDocuments(){
+    //Je pense que getDocuments doit etre dans utilisateur (youssef)
+    ArrayList<Document> getDocuments(Utilisateur utilisateur){
         //TO DO
-        List<Document> list = new ArrayList<Document>();
+        ArrayList<Document> list = new ArrayList<Document>();
         return list;
     }
 }

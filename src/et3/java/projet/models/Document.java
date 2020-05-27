@@ -1,5 +1,6 @@
 package et3.java.projet.models;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public abstract class Document {
@@ -10,6 +11,8 @@ public abstract class Document {
     protected String auteurPrenom;
     protected String auteurNom;
     protected Serie serieDetails;
+    protected int totalCopie;
+    private ArrayList<Utilisateur> utilisateurList;
 
     public Document(String ean, String titre, String publisher, int date, String auteurPrenom, String auteurNom, Serie serieDetails) {
         this.ean = ean;
@@ -19,6 +22,10 @@ public abstract class Document {
         this.auteurPrenom = auteurPrenom;
         this.auteurNom = auteurNom;
         this.serieDetails = serieDetails;
+    }
+
+    public void estEmprunte(){
+        totalCopie--;
     }
 
     @Override
